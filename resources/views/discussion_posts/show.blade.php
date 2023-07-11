@@ -43,7 +43,7 @@
         
         
 
-        <p>{{ $discussion_post->body }}</p>
+        
         <p>Posted by {{ $discussion_post->user->name }} on {{ $discussion_post->created_at }}</p>
         @if((auth()->check() && auth()->user()->id == $discussion_post->user->id)||auth()->user()->isAdmin())
         <form action="{{ route('discussion_posts.destroy', $discussion_post->id) }}" method="POST" class="d-inline">
