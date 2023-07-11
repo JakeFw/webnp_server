@@ -32,7 +32,7 @@
     <div class="container mt-4">
         <h1>{{ $discussion_post->title }}</h1>
         <div class="edit_posts">
-            <a href="{{ route('discussion_posts.edit', $discussion_post->id) }}" class="text-decoration-none text-dark">{{ Edit }}</a>
+            <a href="{{ route('discussion_posts.edit', $discussion_post->id) }}" class="text-decoration-none text-dark"> Edit</a>
         </div>
         <div class="card-body">
             @if($discussion_post->image)
