@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let fadeElems = document.querySelectorAll(".fade-in-scroll");
+  let fadeElems = document.querySelectorAll(".fade-in");
 
   const observerOptions = {
       root: null,
