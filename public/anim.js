@@ -1,27 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let fadeElems = document.querySelectorAll(".fade-in");
+  let jumpElems = document.querySelectorAll(".jump-up");
 
-  const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3 // Adjust this threshold as needed
-  };
+  function jumpUpOnScroll() {
+      jumpElems.forEach(function (elem) {
+          let position = elem.getBoundingClientRect();
+          let windowHeight = window.innerHeight;
 
-  function handleIntersect(entries, observer) {
-      entries.forEach(entry => {
-          if (entry.intersectionRatio > 0) {
-              entry.target.classList.add("visible");
-          } else {
-              entry.target.classList.remove("visible");
+          if (position.top < windowHeight && !elem.classList.contains("visible")) {
+              elem.classList.add("visible");
+          } else if (position.top >= windowHeight && elem.classList.contains("visible")) {
+              elem.classList.remove("visible");
           }
       });
   }
 
-  const observer = new IntersectionObserver(handleIntersect, observerOptions);
+  jumpUpOnScroll();
 
-  fadeElems.forEach(elem => {
-      observer.observe(elem);
-  });
+  // Attach the scroll event listener
+  window.addEventListener("scroll", jumpUpOnScroll);
 });
 
 
