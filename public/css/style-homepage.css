@@ -24,11 +24,7 @@
   transition: ease all 0.5s;
 }
 
-body {
-background-color: var(--background-light);
-color: var(--text-light);
-transition: background-color 0.5s, color 0.5s;
-}
+
 
 .recentarticlessection{
   margin-bottom: 3rem;
@@ -306,10 +302,6 @@ body{
 /* Animation  */
 body {
   min-height: 300vh;
- // background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-
-  //lock homepage
- // overflow: hidden;
 
 }
 
@@ -324,7 +316,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: black;
-//background-image: url("imgs/back.jpg");
+
 }
 header h1, header button {
   position: relative;
@@ -433,13 +425,13 @@ header.open button.menu:after {
 
 .fade-in-scroll{
   opacity: 0;
-  //transform: translate(0, 10vh);
+
   transition: all 3s;
 }
 
 .fade-in-scroll.visible {
   opacity: 1;
-  //transform: translate(0, 0);
+ 
 }
 
 @keyframes fadeDown {
