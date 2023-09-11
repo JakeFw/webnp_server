@@ -18,7 +18,7 @@ $articleCon = new ArticlesController();
 <!DOCTYPE HTML>
     <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href= "css/style-homepage.css" rel="stylesheet" type = "text/css">
+    <link href= "css/style-homepage.scss" rel="stylesheet" type = "text/css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script class="u-script" type="text/javascript" src="AboutUsResource/jquery.js" defer=""></script>
@@ -29,13 +29,16 @@ $articleCon = new ArticlesController();
     <script class="u-script" type="text/javascript" src="AboutUsResource/javascript.js" defer=""></script>
     <head>
         <title>WebNp - Homepage</title>
+
     </head>
 
     <body>
     <div id="particles-js"></div>
 
 
+
 <?php @include 'header.blade.php'?>
+
         <div  class ="intro ">
         <div class="intro-image">
             <img src="/imgs/logo.png" alt="Error" class="img-fluid">
@@ -54,7 +57,7 @@ $articleCon = new ArticlesController();
 
 
         <!-- Recently Added Articles -->
-        <div class="my-div" style="padding-top: 7rem;">
+        <div class="my-div" style="padding-top: 5rem;">
             <div class = "container recentarticlessection jump-up">
             
                 <div class="recentarticlesheader-2">
@@ -87,9 +90,9 @@ $articleCon = new ArticlesController();
                                         <div class="row text-center">
                                             
                                             <?php
-                                                for ($i = 1; $i <= 3; $i += 1){
+                                                for ($i = 1; $i <= 4; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4 ">
+                                                        <div class="col-lg-3 ">
                                                             <a class="card border-0 text-dark " href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -114,11 +117,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                        <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                                         ';
                                                     }
                                                     echo '
@@ -141,9 +144,9 @@ $articleCon = new ArticlesController();
                                     <div class="container">
                                         <div class="row text-center">
                                             <?php
-                                                for ($i = 4; $i <= 6; $i += 1){
+                                                for ($i = 5; $i <= 8; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -168,11 +171,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                        <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                                         ';
                                                     }
                                                     echo '
@@ -194,9 +197,9 @@ $articleCon = new ArticlesController();
                                     <div class="container">               
                                         <div class="row text-center">
                                             <?php
-                                                for ($i = 7; $i <= 9; $i += 1){
+                                                for ($i = 9; $i <= 12; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -221,11 +224,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                        <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
                                                         ';
                                                     }
                                                     echo '
@@ -264,9 +267,9 @@ $articleCon = new ArticlesController();
         <hr>
         </div> 
         
-        <div class = "topicsbox container jump-up" style="padding-bottom: 7rem;">
+        <div class = "topicsbox container jump-up" style="padding-bottom: 5rem;">
             <ul class="topicslist">
-                <div class="topicscol jump-up" style="background-color: #423ba8; color: #ffffff;">
+                <div class="topicscol jump-up catlist">
                     
                     <?php
                         $articlesList = $articleCon->getRecentArticles();
@@ -274,7 +277,7 @@ $articleCon = new ArticlesController();
                         {
                             echo'
                                 <li>
-                                    <div >
+                                    <div class = "catlist_title">
                                         <a href = "'.$articles->location.'">
                                             <h5>&#8827 '.$articles->name.'</h5>
                                         </a>
@@ -322,9 +325,9 @@ $articleCon = new ArticlesController();
                                     <div class="container-fluid mx-auto">
                                         <div class="row text-center">
                                             <?php
-                                                for ($i = 1; $i <= 3; $i += 1){
+                                                for ($i = 1; $i <= 4; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -349,11 +352,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                                                <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" alt="">
                                                         ';
                                                     }
                                                     echo '
@@ -375,9 +378,9 @@ $articleCon = new ArticlesController();
                                     <div class="container">
                                         <div class="row text-center">
                                             <?php
-                                                for ($i = 4; $i <= 6; $i += 1){
+                                                for ($i = 5; $i <= 8; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -402,11 +405,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                        <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" >
                                                         ';
                                                     }
                                                     echo '
@@ -428,9 +431,9 @@ $articleCon = new ArticlesController();
                                     <div class="container">               
                                         <div class="row text-center">
                                             <?php
-                                                for ($i = 7; $i <= 9; $i += 1){
+                                                for ($i = 9; $i <= 12; $i += 1){
                                                     echo '
-                                                        <div class="col-lg-4">
+                                                        <div class="col-lg-3">
                                                             <a class="card border-0 text-dark" href="#" onclick="event.preventDefault();
                                                                 console.log(\'starting\');
                                                                 $.ajax({
@@ -455,11 +458,11 @@ $articleCon = new ArticlesController();
 
                                                     if (file_exists($imagePath)) {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
+                                                        <img style="height: 288px; width: 288px;" src="'.$imagePath.'" alt="'.$subCatCon->getSubCategoryByID($i)->img_alt.'">
                                                         ';
                                                     } else {
                                                         echo '
-                                                                                <img style="max-height: 300px;" src="imgs/survey.jpg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, ollie Landing page">
+                                                        <img style="height: 288px; width: 288px;" src="imgs/survey.jpg" >
                                                         ';
                                                     }
                                                     echo '

@@ -20,7 +20,7 @@ class ArticlesSeeder extends Seeder
         while ($data = fgetcsv($csv)) {
             $record = new Articles();
             $record->id = $data[0];
-            $record->name = $data[1];
+            $record->name = ucwords($data[1]);
             $record->URL = $data[2];
             $record->location = $data[3];
             $record->group = $data[4];
